@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Time Clock Calculator</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/smoothness/jquery-ui-1.8.21.custom.css" rel="stylesheet">
+    <link href="css/tcc.css" rel="stylesheet">
+    <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="tcc.js"></script>
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+	<div class="container-fluid">
+	  <a class="brand" href="#">Time Clock Calculator</a>
+	  <div class="btn-group pull-right">
+	    <a class="btn" href="#" id="result">See your time spent here!</a>
+	  </div>
+	</div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row-fluid">
+	<div class="span4">
+	  <div class="well">
+	    <p>Input your time in the boxes on the right. If you'd like to add more intervals, click Add Interval.</p>
+	    <p>Your time usage will appear in the upper-right hand corner and will update each time your change your time.</p>
+	    <p>Don't worry about closing your browser window. Your browser will save your intervals (if your browser supports HTML 5).</p>
+	    <p>If you'd like to get rid of your intervals, click Remove All Intervals. This will clear your stored intervals as well.</p>
+	  </div>
+	</div>
+	<div class="span8">
+	  <div  id="intervals">
+	  </div>
+	  <button class="btn" type="button" onclick="javascript:addAnInterval()">Add an Interval</button>
+                  <button class="btn" type="button" onclick="javascript:promptRemoveAllDialog();">Remove All Intervals</button>
+        </div>
+
+      </div>
+    <footer class="footer">
+        <p>Feel free to use this tool for whatever you need.</p>
+        <p>Code and Design: &copy; 2012 Cecil Research and Development</p>
+    </footer>
+    </div>
+    <div id="removeallwarn" style="display: none">
+        <p>Are you sure you want to remove these intervals?</p>
+        <p>This action cannot be undone.</p>
+    </div>
+  </body>
+</html>
